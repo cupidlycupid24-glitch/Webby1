@@ -1,0 +1,111 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+/* Body */
+body { background: #f5f7fa; color: #333; line-height: 1.6; scroll-behavior: smooth; }
+
+/* Header / Hero */
+header {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  animation: fadeInDown 1s ease-out;
+}
+header h1 { font-size: 3em; margin-bottom: 10px; }
+header p { font-size: 1.2em; margin-bottom: 20px; }
+header button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+header button:hover { transform: scale(1.1); }
+
+/* Navigation */
+nav { display: flex; justify-content: center; background: #1b3a57; }
+nav a {
+  color: white; padding: 15px 25px; text-decoration: none; font-weight: bold; transition: 0.3s;
+}
+nav a:hover { background: #fff; color: #1b3a57; border-radius: 8px; transform: scale(1.05); }
+
+/* Sections */
+section { max-width: 1000px; margin: 40px auto; padding: 40px; background: #fff; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); animation: fadeIn 1s ease-in; }
+
+/* Cards / Image Gallery */
+.cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.card {
+  background: #f0f4f8; flex: 1 1 300px; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+.card:hover { transform: scale(1.05); }
+
+/* Contact Form */
+form { display: flex; flex-direction: column; gap: 15px; }
+input, textarea { padding: 12px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 16px; }
+button.submit { width: 200px; margin: 0 auto; background: #4facfe; color: white; border: none; font-size: 16px; padding: 12px; border-radius: 50px; cursor: pointer; }
+button.submit:hover { transform: scale(1.05); }
+
+/* Footer */
+footer { text-align: center; padding: 20px; background: #1b3a57; color: white; margin-top: 50px; }
+
+/* Animations */
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity:1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
+
+/* Responsive */
+@media (max-width: 768px) { .cards { flex-direction: column; align-items: center; } nav { flex-direction: column; } }
+/* Sticky Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Carousel container */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.carousel img {
+  width: 100%;
+  flex-shrink: 0;
+  transition: transform 0.5s ease;
+}
+
+/* Animated section text */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease-out;
+}
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Social icons */
+footer .social {
+  margin-top: 15px;
+}
+footer .social a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+footer .social a:hover { transform: scale(1.2); }
+
+/* Small tweaks */
+button { transition: all 0.3s ease; }
+button:hover { transform: scale(1.1); }
